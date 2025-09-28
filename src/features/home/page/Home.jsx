@@ -14,8 +14,8 @@ import Footer from '../../../components/ui/Footer'
 
 const Home = () => {
   return (
-    <div>
-        <NavBar type={"group1"}/>
+    <div className='bg-black'>
+        <NavBar type={"group1"} />
         <HeroSection/>
         <TrustedBy/>
         <FeaturedProject/>

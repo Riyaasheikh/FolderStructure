@@ -2,16 +2,30 @@ import React from 'react'
 import SectionHeading from '../global/SectionHeading'
 import logo1 from '../../assets/icons/profile_icon.png'
 import logo2 from '../../assets/icons/quality_icon.png'
-import logo3 from '../../assets/icons/razorpay_logo.png'
+// import logo3 from '../../assets/icons/razorpay_logo.png'
 
 const TrustedBy = () => {
   return (
-    <div>
-        <SectionHeading subtitle={'Trusted my 1000 clients'}/>
-        <img src={logo1} alt="" />
-        <img src={logo2} alt="" />
-        <img src={logo3} alt="" />
-
+    <div className='bg-black px-4 py-8 '>
+        <SectionHeading subtitle={'Trusted by Over 1,000 Clients Worldwide'} subtitleClassName={'text-gray-400 mb-8 font-normal text-center text-lg'}/>
+        <div className='flex justify-around'>
+            <div className='flex text-gray-200 items-center space-x-3'>
+                <img className='h-14 w-12 ' src={logo1} alt="" />
+                <p className='text-gray-400 font-normal'>Lopisum</p>
+            </div>
+            <div className='flex text-gray-200 items-center space-x-3'>
+                <img className='h-14 w-12 ' src={logo2} alt="" />
+                <p className='text-gray-400 font-normal'>Lopisum</p>
+            </div>
+            <div className='flex text-gray-200 items-center space-x-3'>
+                <img className='h-14 w-12 ' src={logo2} alt="" />
+                <p className='text-gray-400 font-normal'>Lopisum</p>
+            </div>
+            <div className='flex text-gray-200 items-center space-x-3'>
+                <img className='h-14 w-12 ' src={logo1} alt="" />
+                <p className='text-gray-400 font-normal'>Lopisum</p>
+            </div>
+        </div>
     </div>
   )
 }

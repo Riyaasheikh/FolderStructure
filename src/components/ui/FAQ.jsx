@@ -1,24 +1,39 @@
-import React from 'react'
-import SectionHeading from '../global/SectionHeading'
-import Buttons from '../global/Buttons'
+import React from "react";
+import SectionHeading from "../global/SectionHeading";
+import Buttons from "../global/Buttons";
+import AccordinCom from "../../features/home/components/AccordinCom";
+import { accordioData } from '../../data/accordinData'; // 👈 import data
 
 const FAQ = () => {
   return (
-    <div>
-        <div className='left'>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white bg-black">
+      {/* Left side */}
+      <div className="flex flex-col gap-8">
+        <SectionHeading
+          title={
+            <>
+              <div>Frequent</div>
+              <div>Asked Question</div>
+            </>
+          }
+          subtitle={"Have Another Question? Please Contact Our Team "}
+          titleClassName={"text-white text-left ml-5 mt-9"}
+          subtitleClassName={"text-white text-left ml-5 mt-6"}
+        />
+        <Buttons
+          button1={"Contact Our Team"}
+          className="bg-white text-black relative ml-39 mb-6"
+        />
+      </div>
 
-        <SectionHeading title={'FAQS'} subtitle={'Frequent Asked Question'}/>
-        <Buttons />
-        </div>
-        <div className="right">
-            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti non aperiam facere adipisci. Rerum inventore atque quo quae culpa fugiat libero nesciunt necessitatibus. Accusamus quae ipsam impedit ab consequatur iure.</p>
-
-            </div>
-
-        </div>
+      {/* Right side with accordions */}
+      <div className="right max-w-xl mx-auto">
+        {accordioData.map((item, i) => (
+          <AccordinCom key={i} title={item.title} content={item.content} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;
