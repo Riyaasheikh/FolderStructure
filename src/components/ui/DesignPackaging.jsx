@@ -38,8 +38,7 @@ const DesignPackaging = () => {
         </div>
         <div className="bg-[#1f1f1f] mt-4 mr-19 rounded-lg ">
           <div className="border border-[#29292a] bg-[#262626] p-2 ml-2 mb-5">
-
-         <DesignCard/>
+            <DesignCard />
           </div>
           <div className="max-w-md mr-9 mb-6">
             <h2 className="text-white font-bold ml-9">About me</h2>

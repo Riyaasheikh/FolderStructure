@@ -1,18 +1,18 @@
-
 export const plans = [
   {
     title: "Discovery Session",
-    description: "Kick off with a free 30-minute strategy call to align on goals and scope.",
+    description:
+      "Kick off with a free 30-minute strategy call to align on goals and scope.",
     price: "$0",
     period: "month",
     features: [
       "30-minute kickoff workshop",
       "UX audit & opportunity mapping",
       "High-level project roadmap",
-      "Detailed proposal & quote"
+      "Detailed proposal & quote",
     ],
     buttonText: "Choose This Plan",
-    popular: false
+    popular: false,
   },
   {
     title: "Professional Package",
@@ -24,10 +24,10 @@ export const plans = [
       "High-fidelity UI mockups",
       "Interactive Figma prototype",
       "2 rounds of revisions",
-      "Figma source-file handoff"
+      "Figma source-file handoff",
     ],
     buttonText: "Choose This Plan",
-    popular: true
+    popular: true,
   },
   {
     title: "Enterprise Retainer",
@@ -39,9 +39,9 @@ export const plans = [
       "Brand system & component library",
       "Advanced micro-interactions & animations",
       "Unlimited revisions & updates",
-      "Priority SLAs & ongoing consults"
+      "Priority SLAs & ongoing consults",
     ],
     buttonText: "Choose This Plan",
-    popular: false
-  }
-]
+    popular: false,
+  },
+];

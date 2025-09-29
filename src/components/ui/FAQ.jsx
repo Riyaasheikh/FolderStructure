@@ -2,12 +2,11 @@ import React from "react";
 import SectionHeading from "../global/SectionHeading";
 import Buttons from "../global/Buttons";
 import AccordinCom from "../../features/home/components/AccordinCom";
-import { accordioData } from '../../data/accordinData'; // 👈 import data
+import { accordioData } from "../../data/accordinData"; // 👈 import data
 
 const FAQ = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white bg-black">
-      {/* Left side */}
       <div className="flex flex-col gap-8">
         <SectionHeading
           title={
@@ -26,7 +25,6 @@ const FAQ = () => {
         />
       </div>
 
-      {/* Right side with accordions */}
       <div className="right max-w-xl mx-auto">
         {accordioData.map((item, i) => (
           <AccordinCom key={i} title={item.title} content={item.content} />
