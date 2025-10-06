@@ -9,8 +9,8 @@ const SplitColorParagraph = ({
   alignment = 'left'
 }) => {
   return (
-    <div className={`max-w-3xl mx-auto  my-3 p-3 ${className}`}>
-      <p className={`text-lg leading-relaxed text-${alignment}`}>
+    <div className={`w-full ${className}`}>
+      <p className={`text-lg leading-relaxed text-${alignment} w-full`}>
         <span className={firstColor}>{firstPart}</span>
         <span className={secondColor}> {secondPart}</span>
       </p>

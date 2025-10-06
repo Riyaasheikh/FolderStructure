@@ -1,31 +1,30 @@
-import React from 'react'
+import React from "react";
 
-const ProjectCard = ({title, description, btn, image, image2}) => {
+const ProjectCard = ({ title, description, btn, image }) => {
   return (
-    <div className='bg-[#131313] text-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-4xl px-8 py-2 mt-2 mx-auto'>
-      <div className='flex flex-col lg:flex-row items-center justify-between gap-10'>
-       
-        <div className='flex-1 lg:max-w-lg'>
-          <div className='text-3xl font-bold text-white mb-4'>
+    <div className="bg-[#131313] text-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-5xl  px-4 sm:px-6 lg:px-10 py-6 sm:py-8  mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+        <div className="flex-1 w-full lg:max-w-xl text-center lg:text-left">
+          <div className="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
             {title}
           </div>
-          <div className='text-gray-300 mb-6 text-lg leading-relaxed'>
+           <div className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg leading-relaxed">
             {description}
-          </div>
-          <div className='mb-5'>
-            {btn}
-          </div>
-        </div>
-        
-        <div className='flex-1 lg:max-w-lg'>
-          <div className='relative bg-[#332c2c] rounded-lg h-80 flex items-center justify-center'>
-            <img src={image} alt={title} className='absolute h-69 w-48 rounded-lg object-cover z-10 left-3' />
-            <img src={image2} alt={title} className='absolute h-60 w-40 rounded-lg object-cover z-20 left-55 opacity-90'/>
+             </div>
+                <div className="mb-4 sm:mb-5">{btn}</div>
+            </div>
+                 <div className="flex-1 w-full lg:max-w-lg flex justify-center">
+                    <div className="relative bg-[#332c2c] rounded-lg h-40 sm:h-56 lg:h-6 w-full max-w-[240px] sm:max-w-sm lg:max-w-full flex items-center justify-center">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full max-h-40 sm:max-h-56 lg:max-h-72 object-contain rounded-lg transform hover:scale-90 transition-transform duration-300"
+            />
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

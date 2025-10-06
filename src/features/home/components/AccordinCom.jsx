@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
-const AccordinCom = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const AccordinCom = ({ title, content, isOpen, onToggle,className='' }) => {
   return (
-    <div className="border-b border-gray-200">
+    <div className={`border border-[#29292a] rounded-lg bg-[#1f1f1f] overflow-hidden ${className}`}>
       <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center cursor-pointer py-4"
+        onClick={onToggle}
+        className="flex justify-between items-center cursor-pointer p-6 hover:bg-[#262626] transition-colors"
       >
-        <div className="font-medium text-white">{title}</div>
-        <span
-          className={`transform transition-transform duration-300 text-lg text-white`}
-        >
-          {isOpen ? "˅" : "›"}
+        <h3 className="text-lg font-semibold text-white pr-4">{title}</h3>
+        <span className={`transform transition-transform duration-300 text-xl text-white flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
+          ⌄
         </span>
       </div>
 
       <div
         className={`transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="pb-4 text-gray-200">{content}</p>
+        <div className="p-6 pt-0">
+          <div className="text-gray-300 leading-relaxed">
+            {content}
+          </div>
+        </div>
       </div>
     </div>
   );

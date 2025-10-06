@@ -1,11 +1,11 @@
 import React from "react";
-import heroImg from "../../assets/asset/p2.jpeg";
+import heroImg from "../../assets/asset/p5.avif";
 const DesignCard = () => {
   return (
     <div>
       <div className="flex items-center space-x-3">
         <img
-          className="w-15 h-15 rounded-lg object-cover"
+          className="w-18 h-18  rounded-lg object-cover"
           src={heroImg}
           alt="Jasmin Paul"
         />
@@ -21,5 +21,4 @@ const DesignCard = () => {
     </div>
   );
 };
-
 export default DesignCard;

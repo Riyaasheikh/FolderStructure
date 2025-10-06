@@ -1,4 +1,3 @@
-import profileIcon from "../assets/icons/profile_icon.png";
 import icon2 from "../assets/icons/quality_icon.png";
 export const testimonialsData = [
   {

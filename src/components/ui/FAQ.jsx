@@ -1,33 +1,40 @@
-import React from "react";
-import SectionHeading from "../global/SectionHeading";
-import Buttons from "../global/Buttons";
+import React, { useState } from "react";
 import AccordinCom from "../../features/home/components/AccordinCom";
-import { accordioData } from "../../data/accordinData"; // 👈 import data
+import { accordioData } from "../../data/accordinData";
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(0); 
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index); 
+  };
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white bg-black">
-      <div className="flex flex-col gap-8">
-        <SectionHeading
-          title={
-            <>
-              <div>Frequent</div>
-              <div>Asked Question</div>
-            </>
-          }
-          subtitle={"Have Another Question? Please Contact Our Team "}
-          titleClassName={"text-white text-left ml-5 mt-9"}
-          subtitleClassName={"text-white text-left ml-5 mt-6"}
-        />
-        <Buttons
-          button1={"Contact Our Team"}
-          className="bg-white text-black relative ml-39 mb-6"
-        />
+    <div className="grid grid-cols-1 lg:grid-cols-2   gap-15 text-white bg-black py-10 mt-3 px-4 sm:px-5 lg:px-2 max-w-6xl mx-auto">
+      <div className="flex flex-col  ">
+        <div className="mb-5 ">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-left">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-[#B4B4B4] text-lg">
+            Have another question? Please contact our team!
+          </p>
+        </div>
+        
       </div>
 
-      <div className="right max-w-xl mx-auto">
-        {accordioData.map((item, i) => (
-          <AccordinCom key={i} title={item.title} content={item.content} />
+      {/* Right Column - Accordions */}
+      <div className="space-y-2 ">
+        {accordioData.map((item, index) => (
+          <AccordinCom 
+            key={index} 
+            title={item.title} 
+            content={item.content}
+            isOpen={openIndex === index}
+            onToggle={() => toggleAccordion(index)}
+            className={'border border-[#323334]'}
+            
+          />
         ))}
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import SplitColorParagraph from "../global/SplitColorParagraph";
 
 const TestimonialCard = ({
   name = "",
@@ -12,25 +11,28 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className={`max-w-md border border-[#29292a] rounded-lg  bg-[#1f1f1f]  ${className}`}
+      className={`w-full border border-[#29292a] rounded-xl bg-[#1f1f1f] p-5 hover:border-[#3a3a3a] transition-all duration-300 ${className}`}
     >
-      <div className="mt-4 ml-3">
-        <h3 className="text-white font-semibold">{name}</h3>
-        <p className="text-gray-400 text-sm">{role}</p>
+      <div className="mb-4">
+        <h3 className="text-white font-semibold text-lg">{name}</h3>
+        <p className="text-gray-400 text-sm mt-1">{role}</p>
       </div>
 
-      <SplitColorParagraph
-        firstPart={testimonialFirstPart}
-        secondPart={testimonialSecondPart}
-        firstColor="text-white"
-        secondColor="text-gray-300"
-        className="mb-1"
-      />
+      <div className="mb-4">
+        <p className="text-white text-md leading-relaxed ">
+          {testimonialFirstPart}
+        </p>
+        {testimonialSecondPart && (
+          <p className="text-gray-300 text-md leading-relaxed">
+            {testimonialSecondPart}
+          </p>
+        )}
+      </div>
 
-      <div className="flex items-center justify-start gap-2 ">
-        <span className="ml-2 text-gray-200 text-md">{company}</span>
+      <div className="flex items-center justify-between pt-3 border-t border-[#29292a]">
+        <span className="text-gray-200 text-sm">{company}</span>
         {icon && (
-          <div className="text-2xl text-gray-400">
+          <div className="text-gray-400">
             <img className="h-5" src={icon} alt="" />
           </div>
         )}

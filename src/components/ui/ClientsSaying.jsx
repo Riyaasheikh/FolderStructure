@@ -5,21 +5,18 @@ import { testimonialsData } from "../../data/testinomialData";
 
 const ClientsSaying = () => {
   return (
-    <div className="text-white py-6  bg-black">
-      <SectionHeading
-        title={
-          <>
-            <div>Hear What Clients Are </div>
-            <div>Saying</div>
-          </>
-        }
-        subtitle={
-          "Discover how our collaborations have transformed ideas into exceptional results"
-        }
-        titleClassName={"mb-5"}
-      />
-      <div className="max-w-4xl  mx-auto px-4 py-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="text-white py-16 bg-black">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Hear What Clients Are Saying
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Discover how our collaborations have transformed ideas into exceptional results
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {testimonialsData.map((testimonial, index) => (
             <TestimonialCard
               key={index}
@@ -29,6 +26,7 @@ const ClientsSaying = () => {
               testimonialSecondPart={testimonial.testimonialSecondPart}
               company={testimonial.company}
               icon={testimonial.icon}
+              className="border border-[#323334]"
             />
           ))}
         </div>

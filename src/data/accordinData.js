@@ -1,22 +1,27 @@
 export const accordioData = [
   {
-    title: "How to reset my password?",
+    title: "What services do you offer?",
     content:
-      'Go to the login page, click "Forgot Password", enter your email, and follow the instructions sent to your inbox to reset your password.',
+      'I design end‑to‑end digital experiences—everything from brand identity and high‑fidelity UI/UX for web & mobile to interactive prototypes and design systems ready for development.',
   },
   {
-    title: "What is your refund policy?",
+    title: "What does your design process look like?",
     content:
-      "We offer a 30-day money-back guarantee for all our premium plans. Contact our support team within 30 days of purchase for a full refund.",
+      "It starts with a discovery call to define goals and users, followed by research, low‑fi wireframes, high‑fi visuals, interactive prototypes, and finally a dev‑ready hand‑off with ongoing support for iterations.",
   },
   {
-    title: "Do you offer customer support?",
+    title: "How long does a typical project take?",
     content:
-      "Yes! We provide 24/7 customer support via email, live chat, and phone. Our average response time is less than 2 hours for premium users.",
+      "Timelines vary by scope: a single‑page website can ship in 2‑3 weeks, while a full product redesign may take 6‑8 weeks. A detailed schedule is shared after we finalize the brief.",
   },
   {
-    title: "Can I upgrade my plan later?",
+    title: "What deliverables will I receive?",
     content:
-      "Absolutely! You can upgrade your plan at any time from your account settings. The new features will be available immediately after payment.",
+      "Expect layered Figma files, a component library, a style guide, export‑ready assets (SVG/PNG), and annotated specs that make developer hand‑off seamless."
+  },
+  {
+    title: "How do we get started—and how much does it cost?",
+    content:
+      "Book a free 30‑minute call using the button below. After our chat, you’ll receive a tailored proposal, timeline, and fixed‑price quote. A 30 % deposit secures your spot in my calendar."
   },
 ];

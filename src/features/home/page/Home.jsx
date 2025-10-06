@@ -14,7 +14,7 @@ import Footer from '../../../components/ui/Footer'
 
 const Home = () => {
   return (
-    <div className='bg-black'>
+    <div className='bg-black overflow-y-auto overflow-x-hidden'>
         <NavBar type={"group1"} />
         <HeroSection/>
         <TrustedBy/>

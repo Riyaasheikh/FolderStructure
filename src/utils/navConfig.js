@@ -6,7 +6,6 @@ export const getNavConfig = (type) => {
           { label: 'Home', href: '/' },
           { label: 'Contact', href: '/contact' },
           { label: 'Work', href: '/work' },
-          { label: '404', href: '/404' },
         ],
         button: { label: 'Contact Now' },
       };
