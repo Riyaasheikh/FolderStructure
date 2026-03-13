@@ -1,0 +1,14 @@
+import React from "react";
+
+const Buttons = ({ button1, className = "", onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-full px-7 py-2 border border-gray-800 hover:border-gray-700 transition-all duration-200 font-medium ${className}`}
+    >
+      {button1}
+    </button>
+  );
+};
+
+export default Buttons;
