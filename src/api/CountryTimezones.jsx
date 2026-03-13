@@ -4,13 +4,11 @@ const TimeZoneSelector = ({ onTimeZoneChange, onTimeFormatChange }) => {
   const [selectedZone, setSelectedZone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
   const [format, setFormat] = useState("12h");
 
-  // Get all official IANA time zones without an external API
   const timeZones = useMemo(() => {
     return Intl.supportedValuesOf("timeZone").map((zone) => {
-      // Calculate GMT offset for each zone
       const now = new Date();
       const tzString = now.toLocaleString("en-US", { timeZone: zone, timeZoneName: "shortOffset" });
-      const offset = tzString.split(" ").at(-1); // e.g., "GMT+5"
+      const offset = tzString.split(" ").at(-1);
       return { zone, offset };
     });
   }, []);

@@ -1,5 +1,5 @@
 import React from "react";
-import { plans } from "../../../../../data/Plans";
+import { plans } from "../../../../../data/plans";
 import { PiCrownLight } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa6";
 
