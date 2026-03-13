@@ -10,7 +10,6 @@ import Layout from '../../../layout/Layout'
 const Contact = () => {
   const [loading, setLoading] = useState(true);
     useEffect(() => {
-    // Simulate a 2-second loading period (you can adjust or remove this)
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);

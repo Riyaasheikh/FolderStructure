@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { getNavConfig } from "../../utils/navConfig";
 import Buttons from "../global/Buttons";
 import Layout from "../../layout/Layout";
-
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();

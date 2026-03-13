@@ -11,7 +11,6 @@ export const router = createBrowserRouter([
   { path: "/contact", element: <Contact /> },
   { path: "/work", element: <Work /> },
   { path: "/confirmation", element: <ConfirmationForm /> },
-  // Give the success page its own dedicated route
   { path: "/success", element: <ConfirmationPage /> },
 ]);
 

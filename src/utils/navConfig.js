@@ -1,4 +1,3 @@
-// utils/navConfig.js
 export const getNavConfig = () => {
   return {
     links: [

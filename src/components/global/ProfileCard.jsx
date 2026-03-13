@@ -1,4 +1,3 @@
-// ProfileCard.jsx
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import heroImg from "../../assets/asset/p9.avif";
