@@ -17,13 +17,11 @@ const Home = () => {
   return (
     <div className='bg-[#0C0C0C] min-h-screen overflow-x-hidden'>
         <NavBar type={"group1"} />
-
         <HeroSection/>
         <Layout>
-
         <TrustedBy/>
         <FeaturedProject/>
-        <Testimonial/>s
+        <Testimonial/>
         <ServicesExpert/>
         <DesignPackaging/>
         <FlexiblePlans/>
