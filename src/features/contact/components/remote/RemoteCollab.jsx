@@ -37,7 +37,6 @@ const RemoteCollab = () => {
           />
         </div>
 
-        {/* RIGHT SIDE — IMAGES */}
         <RemoteCard />
       </div>
     </div>
